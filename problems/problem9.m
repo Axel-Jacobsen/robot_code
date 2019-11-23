@@ -80,7 +80,7 @@ sup_q = [D11, D22, K4, 2*K1]';
 n = 53;
 Jm = 1320 * 10^(-7);
 
-J_eff = zeros(4);
+J_eff = zeros(4,1);
 for i = 1:4
     J = 1/(n^2) * sup_q(i) + Jm;
     J_eff(i) = J;
