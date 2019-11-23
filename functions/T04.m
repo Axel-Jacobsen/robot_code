@@ -40,4 +40,3 @@ function out = T04(q)
 
     out = T01_dh * T12_dh * T23_dh * T34_dh;
 end
-
