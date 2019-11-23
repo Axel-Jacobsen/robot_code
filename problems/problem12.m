@@ -31,4 +31,4 @@ d2 = [(1/(KT*n^2)*(JM + max(diag(D2))))  (1/(KT*n^2) * (f_eff + KD2))  KP2]';
 d3 = [(1/(KT*n^2)*(JM + max(diag(D3))))  (1/(KT*n^2) * (f_eff + KD3))  KP3]';
 d4 = [(1/(KT*n^2)*(JM + max(diag(D4))))  (1/(KT*n^2) * (f_eff + KD4))  KP4]';
 
-sim('problem12');
+sim('simulink_problem12');
