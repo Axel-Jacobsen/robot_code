@@ -31,6 +31,9 @@ J(:,3) = [z2; zeros(3,1)];
 % Joint 4 is revolute
 J(:,4) = [symcross(z3, (o4-o3)); z3];
 
+getJ = matlabFunction(J);
+getJ()
+
 
 function [v] = symcross(a, b)
     v = [a(2)*b(3) - a(3)*b(2);

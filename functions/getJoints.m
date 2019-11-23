@@ -9,8 +9,13 @@ function [q] = getJoints(x, p)
     
     t2 = atan2(cx/(d3*cos(t1)), (cz-1.5)/d3);
     
-    phi = atan2(x(3), x(2)/sin(t1));
-    t4 = phi-t2;
+    % Calculate t4
+    v = [1.02*x(1);1.02*x(2);1.02*x(3)];  % Vector for last member
+    w = [1.02*x(1);1.02*x(2);0];  % Projected to x,y plane
+    phi = acos(norm(w)/norm(v));  % Angle below x,y plane
+    
+    
+    t4 = pi + phi - t2;
     
     while t4 < -pi/2
         t4 = t4 + 2*pi;
