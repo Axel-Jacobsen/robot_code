@@ -1,13 +1,13 @@
-problem7;
+problem9;
 
 n = 53;
 omega = 15;
 zeta = 1;
 JM = 1320E-7;
-J_eff_1 = (1 / n^2) * max(diag(D1)) + JM;
-J_eff_2 = (1 / n^2) * max(diag(D2)) + JM;
-J_eff_3 = (1 / n^2) * max(diag(D3)) + JM;
-J_eff_4 = (1 / n^2) * max(diag(D4)) + JM;
+J_eff_1 = J_eff(1); %(1 / n^2) * max(diag(D1)) + JM;
+J_eff_2 = J_eff(2); %(1 / n^2) * max(diag(D2)) + JM;
+J_eff_3 = J_eff(3); %(1 / n^2) * max(diag(D3)) + JM;
+J_eff_4 = J_eff(4); %(1 / n^2) * max(diag(D4)) + JM;
 f_eff = 2.4e-5;
 KT = 0.17;
 
