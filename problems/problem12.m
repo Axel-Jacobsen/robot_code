@@ -21,14 +21,14 @@ KD2 = 2*zeta*KP2/omega - f_eff/KT;
 KD3 = 2*zeta*KP3/omega - f_eff/KT;
 KD4 = 2*zeta*KP4/omega - f_eff/KT;
 
-n1 = [KD1  KP1]';
-n2 = [KD2  KP2]';
-n3 = [KD3  KP3]';
-n4 = [KD4  KP4]';
+n1 = [KD1  KP1];
+n2 = [KD2  KP2];
+n3 = [KD3  KP3];
+n4 = [KD4  KP4];
 
-d1 = [(1/(KT*n^2)*(JM + max(diag(D1))))  (1/(KT*n^2) * (f_eff + KD1))  KP1]';
-d2 = [(1/(KT*n^2)*(JM + max(diag(D2))))  (1/(KT*n^2) * (f_eff + KD2))  KP2]';
-d3 = [(1/(KT*n^2)*(JM + max(diag(D3))))  (1/(KT*n^2) * (f_eff + KD3))  KP3]';
-d4 = [(1/(KT*n^2)*(JM + max(diag(D4))))  (1/(KT*n^2) * (f_eff + KD4))  KP4]';
+d1 = [(1/(KT*n^2)*(JM + max(diag(D1))))  (1/(KT*n^2) * (f_eff + KD1))  KP1];
+d2 = [(1/(KT*n^2)*(JM + max(diag(D2))))  (1/(KT*n^2) * (f_eff + KD2))  KP2];
+d3 = [(1/(KT*n^2)*(JM + max(diag(D3))))  (1/(KT*n^2) * (f_eff + KD3))  KP3];
+d4 = [(1/(KT*n^2)*(JM + max(diag(D4))))  (1/(KT*n^2) * (f_eff + KD4))  KP4];
 
 sim('simulink_problem12');
