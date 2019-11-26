@@ -1,46 +1,17 @@
 %   31383 ROBOTICS - PROJECT ASSIGNMENT
 %   PROBLEM 9
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%   BELOW IS COPIED AND PASTED FROM Q7 TO FIND THE ...
+problem7;
 
-%   Defining numerical values for each of the 4 links
-%   Link 1 = Cylinder
-L1 = 0.67;
-r1 = 0.04;
-m1 = 4.9;
-%   Link 2 = Box
-L2 = 1.7;
-b2 = 0.22;
-m2 = 8.1;
-%   Link 3 = Box
-L3 = 1.65;
-b3 = 0.18;
-m3 = 4.9;
-%   Link 4 = Infinitely thin rod
-a4 = 0.98;
-m4 = 2.2;
-
-%   Determining the principal moments of inertia for each link
-%       and consequently the matrix of inertia D
-%   Link 1
-I1 = 1/4 *m1 * r1^2 + 1/12 * m1 * L1^2;  % = I1_xx = I1_zz
-I1_yy = 1/2 * m1 * r1^2; 
-
-%   Link 2
-I2 = 1/12 * m2 * (b2^2 + L2^2);  % = I2_xx = I2_yy
-I2_zz = 1/12 * m2 *(b2^2 + b2^2);
-
-%   Link 3
-I3 = 1/12 * m3 * (b3^2 + L3^2);  % = I3_xx = I3_zz
-I3_yy = 1/12 * m3 *(b3^2 + b3^2);
-
-%   Link 4
-I4 = 1/12 * m4 * a4^2;   % = I4_yy = I4_zz
-
+I1    = I1_mat(1,1);
+I1_yy = I1_mat(2,2);
+I2    = I2_mat(1,1);
+I2_zz = I2_mat(3,3);
+I3    = I3_mat(1,1);
+I3_yy = I3_mat(2,2);
+I4    = I4_mat(3,3);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 %   With the above determined moments of inertia, we can use them to
 %       determine values for the symmetric manipulator inertia tensor D(q)
 
@@ -82,8 +53,5 @@ Jm = 1320 * 10^(-7);
 
 J_eff = zeros(4,1);
 for i = 1:4
-    J = 1/(n^2) * sup_q(i) + Jm;
-    J_eff(i) = J;
+    J_eff(i) = 1/(n^2) * sup_q(i) + Jm;
 end
-
-J_eff = J_eff';

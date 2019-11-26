@@ -15,10 +15,10 @@ a4 = 0.98;
 m4 = 2.2;
 
 % Compute
-D1 = cylinder(m1, r1, L1, 2);
-D2 = cuboid(m2, b2, L2, 3);
-D3 = cuboid(m3, b3, L3, 2);
-D4 = thinrod(m4, a4, 1);
+I1_mat = cylinder(m1, r1, L1, 2);
+I2_mat = cuboid(m2, b2, L2, 3);
+I3_mat = cuboid(m3, b3, L3, 2);
+I4_mat = thinrod(m4, a4, 1);
 
 
 % Functions
