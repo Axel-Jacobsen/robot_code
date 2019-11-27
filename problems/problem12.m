@@ -25,10 +25,10 @@ n2 = KT * [KD2  KP2];
 n3 = KT * [KD3  KP3];
 n4 = KT * [KD4  KP4];
 
-d1 = [JM (f_eff + KT * KD1) (KT * KP1)];
-d2 = [JM (f_eff + KT * KD2) (KT * KP2)];
-d3 = [JM (f_eff + KT * KD3) (KT * KP3)];
-d4 = [JM (f_eff + KT * KD4) (KT * KP4)];
+d1 = [(JM + (1/n^2)*sup_q(1))  (f_eff + KT*KD1)  KT*KP1];
+d2 = [(JM + (1/n^2)*sup_q(2))  (f_eff + KT*KD2)  KT*KP2];
+d3 = [(JM + (1/n^2)*sup_q(3))  (f_eff + KT*KD3)  KT*KP3];
+d4 = [(JM + (1/n^2)*sup_q(4))  (f_eff + KT*KD4)  KT*KP4];
 
 so_z1 = sim('simulink_problem12');
 
@@ -51,17 +51,14 @@ n2 = KT * [KD2  KP2];
 n3 = KT * [KD3  KP3];
 n4 = KT * [KD4  KP4];
 
-d1 = [JM (f_eff + KT * KD1) (KT * KP1)];
-d2 = [JM (f_eff + KT * KD2) (KT * KP2)];
-d3 = [JM (f_eff + KT * KD3) (KT * KP3)];
-d4 = [JM (f_eff + KT * KD4) (KT * KP4)];
+d1 = [(JM + (1/n^2)*sup_q(1))  (f_eff + KT*KD1)  KT*KP1];
+d2 = [(JM + (1/n^2)*sup_q(2))  (f_eff + KT*KD2)  KT*KP2];
+d3 = [(JM + (1/n^2)*sup_q(3))  (f_eff + KT*KD3)  KT*KP3];
+d4 = [(JM + (1/n^2)*sup_q(4))  (f_eff + KT*KD4)  KT*KP4];
 
 so_z2 = sim('simulink_problem12');
 
 plot(so_z1.tout, so_z1.simout, 'linewidth', 3);
-axis([0 0.25 0 0.75]);
-legend({'signal', 'zeta=1: q1','zeta=1: q2','zeta=1: q3','zeta=1: q4'});
 hold on;
 plot(so_z2.tout, so_z2.simout, 'linewidth', 1);
-legend({'zeta=0: q1','zeta=0: q2','zeta=0: q3','zeta=0: q4'});
 
