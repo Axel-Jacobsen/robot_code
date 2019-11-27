@@ -7,3 +7,6 @@ problems/slprj/accel/simulink_problem12/amsi_serial.mat
 problems/slprj/accel/simulink_problem12/simulink_problem12_top_vm.bc
 problems/slprj/accel/simulink_problem12/tmwinternal/simulink_cache.xml
 problems/slprj/sl_proj.tmw
+problems/slprj/sim/varcache/simulink_problem13/checksumOfCache.mat
+problems/slprj/sim/varcache/simulink_problem13/tmwinternal/simulink_cache.xml
+problems/slprj/sim/varcache/simulink_problem13/varInfo.mat

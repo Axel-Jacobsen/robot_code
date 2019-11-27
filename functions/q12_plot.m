@@ -1,10 +1,7 @@
-problem9;
+%% Call this script at the end of q12 to set zeta to zero and plot all results
 
-% 'etc' configurations
-omega = 15;
-zeta = 1;
-f_eff = 2.4e-5;
-KT = 0.17;
+
+zeta = 0;
 
 % PD Constants
 KP1 = omega^2 * J_eff(1) / KT;
@@ -28,11 +25,8 @@ d2 = [(JM + (1/n^2)*sup_q(2))  (f_eff + KT*KD2)  KT*KP2];
 d3 = [(JM + (1/n^2)*sup_q(3))  (f_eff + KT*KD3)  KT*KP3];
 d4 = [(JM + (1/n^2)*sup_q(4))  (f_eff + KT*KD4)  KT*KP4];
 
-so_z1 = sim('simulink_problem12');
+so_z2 = sim('simulink_problem12');
 
-% Script to plot zeta = 1 and zeta = 0 on the same graph
-% Uncomment the following two lines to do this - its hacky but its also
-% 11 pm, and i am exhausted
-
-% addpath '../functions'
-% q12_plot;
+plot(so_z1.tout, so_z1.simout, 'linewidth', 3);
+hold on;
+plot(so_z2.tout, so_z2.simout, 'linewidth', 1);
