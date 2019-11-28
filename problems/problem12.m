@@ -23,10 +23,10 @@ n2 = KT * [KD2  KP2];
 n3 = KT * [KD3  KP3];
 n4 = KT * [KD4  KP4];
 
-d1 = [(JM + (1/n^2)*sup_q(1))  (f_eff + KT*KD1)  KT*KP1];
-d2 = [(JM + (1/n^2)*sup_q(2))  (f_eff + KT*KD2)  KT*KP2];
-d3 = [(JM + (1/n^2)*sup_q(3))  (f_eff + KT*KD3)  KT*KP3];
-d4 = [(JM + (1/n^2)*sup_q(4))  (f_eff + KT*KD4)  KT*KP4];
+d1 = [J_eff(1)  (f_eff + KT*KD1)  KT*KP1];
+d2 = [J_eff(2)  (f_eff + KT*KD2)  KT*KP2];
+d3 = [J_eff(3)  (f_eff + KT*KD3)  KT*KP3];
+d4 = [J_eff(4)  (f_eff + KT*KD4)  KT*KP4];
 
 so_z1 = sim('simulink_problem12');
 

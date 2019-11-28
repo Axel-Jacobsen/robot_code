@@ -47,15 +47,15 @@ KD3 = 2*zeta*KP3/omega - f_eff/KT;
 KD4 = 2*zeta*KP4/omega - f_eff/KT;
 
 % Transfer Function Numerators (ni) and Denomenators (di)
-A1 = KT * [KD1  KP1];
-A2 = KT * [KD2  KP2];
-A3 = KT * [KD3  KP3];
-A4 = KT * [KD4  KP4];
+A1 = 1; % KT * [KD1  KP1];
+A2 = 1; %KT * [KD2  KP2];
+A3 = 1; %KT * [KD3  KP3];
+A4 = 1; %KT * [KD4  KP4];
 
-C1 = n * KT * [(JM + (1/n^2)*sup_q(1))  (f_eff + KT*KD1)  KT*KP1  0];
-C2 = n * KT * [(JM + (1/n^2)*sup_q(2))  (f_eff + KT*KD2)  KT*KP2  0];
-C3 = n * KT * [(JM + (1/n^2)*sup_q(3))  (f_eff + KT*KD3)  KT*KP3  0];
-C4 = n * KT * [(JM + (1/n^2)*sup_q(4))  (f_eff + KT*KD4)  KT*KP4  0];
+C1 = n^2 * [J_eff(1)  (f_eff + KT*KD1)  KT*KP1  0];
+C2 = n^2 * [J_eff(2)  (f_eff + KT*KD2)  KT*KP2  0];
+C3 = n^2 * [J_eff(3)  (f_eff + KT*KD3)  KT*KP3  0];
+C4 = n^2 * [J_eff(4)  (f_eff + KT*KD4)  KT*KP4  0];
 
 so_z1 = sim('simulink_problem13');
 
