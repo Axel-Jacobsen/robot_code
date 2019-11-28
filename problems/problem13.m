@@ -46,11 +46,11 @@ KD2 = 2*zeta*KP2/omega - f_eff/KT;
 KD3 = 2*zeta*KP3/omega - f_eff/KT;
 KD4 = 2*zeta*KP4/omega - f_eff/KT;
 
-% Transfer Function Numerators (ni) and Denomenators (di)
-A1 = 1; % KT * [KD1  KP1];
-A2 = 1; %KT * [KD2  KP2];
-A3 = 1; %KT * [KD3  KP3];
-A4 = 1; %KT * [KD4  KP4];
+% TL Transfer Function Numerators (Ai) and Denomenators (Ci)
+A1 = 1;
+A2 = 1;
+A3 = 1;
+A4 = 1;
 
 C1 = n^2 * [J_eff(1)  (f_eff + KT*KD1)  KT*KP1  0];
 C2 = n^2 * [J_eff(2)  (f_eff + KT*KD2)  KT*KP2  0];

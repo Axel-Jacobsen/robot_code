@@ -1,8 +1,8 @@
 problem9;
 
 % 'etc' configurations
-omega = 15;
-zeta = 1;
+omega = 1;
+zeta = 10;
 f_eff = 2.4e-5;
 KT = 0.17;
 
