@@ -1,3 +1,5 @@
+global GM;
+
 % Define x,y coords for each point
 p1 = [1.4;-0.5];  % [x;y]
 p2 = [1.75;0.5];
@@ -20,3 +22,5 @@ A1 = P1/T;
 A2 = P2/T;
 A3 = P3/T;
 A4 = P4/T;
+
+GM = [A1;A2;A3;A4];
