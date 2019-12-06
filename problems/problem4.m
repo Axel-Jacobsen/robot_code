@@ -1,3 +1,5 @@
+global GM
+
 % Define first and last column of T04 for each point
 X = [0;0;-1;0];  % Same for all points
 P1 = [1.4;-0.5;0.2;1];
@@ -29,3 +31,5 @@ A1 = Q1/T;
 A2 = Q2/T;
 A3 = Q3/T;
 A4 = Q4/T;
+
+GM = [A1;A2;A3;A4];

@@ -16,7 +16,7 @@ P3 = [p3 z z p4 z z];
 P4 = [p4 z z p5 z z];
 
 % Solve for A_i
-A1 = P1/T
-A2 = P2/T
-A3 = P3/T
-A4 = P4/T
+A1 = P1/T;
+A2 = P2/T;
+A3 = P3/T;
+A4 = P4/T;

@@ -48,7 +48,7 @@ PF2 = [KD2/KI  KP2/KI  1];
 PF3 = [KD3/KI  KP3/KI  1];
 PF4 = [KD4/KI  KP4/KI  1];
 
-so_z1 = sim('simulink_problem15');
+so_z1 = sim('simulink_problem16');
 
 % Script to plot zeta = 1 and zeta = 0 on the same graph
 % Uncomment the following two lines to do this - its hacky but its also
